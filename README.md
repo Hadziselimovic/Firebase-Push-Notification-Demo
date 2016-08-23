@@ -3,7 +3,6 @@
 Firebase Cloud Messaging (FCM) is a cross-platform messaging solution that lets you reliably deliver messages at no cost. You can find more info here : https://firebase.google.com/docs/cloud-messaging/
 Simple Firebase Implementation with implemented receiving custom data (currently int ID) that you can use to trigger specific action in application
 
-
 ## Installation
 - Add internet permission in your app
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -13,29 +12,6 @@ Simple Firebase Implementation with implemented receiving custom data (currently
 - Press add Firebase to your Android app button and follow instructions
 - Copy MyFirebaseInstanceIDService and MyFirebaseMessagingService classes
 - Add them to manifest  
-<service android:name=".firebase.MyFirebaseMessagingService">
-            <intent-filter>
-                <action android:name="com.google.firebase.MESSAGING_EVENT" />
-            </intent-filter>
-        </service>
-        <service android:name=".firebase.MyFirebaseInstanceIDService">
-            <intent-filter>
-                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
-            </intent-filter>
-            
-            
-
-Provide code examples and explanations of how to get the project.
-
-## API Reference
-
-Depending on the size of the project, if it is small and simple enough the reference docs can be added to the README. For medium size to larger projects it is important to at least provide a link to where the API reference docs live.
-
-## Testing
-
-Describe and show how to run the tests with code examples.
-
-
 
 ## License
 
