@@ -5,6 +5,10 @@ Firebase Cloud Messaging (FCM) is a cross-platform messaging solution that lets 
 
 This repo is showing you Simple Firebase Implementation with implemented receiving custom data (currently int ID) that you can use to trigger specific action in application
 
+##IMPORTANT
+
+App won't work if you don't create your own google-services.json on https://console.firebase.google.com
+
 ## Installation
 - Add internet permission in your app
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
