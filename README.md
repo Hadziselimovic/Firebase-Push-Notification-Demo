@@ -12,6 +12,7 @@ Simple Firebase Implementation with implemented receiving custom data (currently
 - Press add Firebase to your Android app button and follow instructions
 - Copy MyFirebaseInstanceIDService and MyFirebaseMessagingService classes
 - Add them to manifest  
+- Send push notification from Firebase Console
 
 ## License
 
