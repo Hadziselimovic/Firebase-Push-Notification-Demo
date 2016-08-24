@@ -9,7 +9,7 @@ This repo is showing you Simple Firebase Implementation with implemented receivi
 
 App won't work if you don't create your own google-services.json on https://console.firebase.google.com
 
-## Installation
+## Setup
 - Add internet permission in your app
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
