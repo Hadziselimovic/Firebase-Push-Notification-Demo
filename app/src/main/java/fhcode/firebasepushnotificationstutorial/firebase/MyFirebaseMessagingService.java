@@ -35,16 +35,19 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
         recievedID = remoteMessage.getData().get("id");
         receiveNotification(remoteMessage.getData().get("body"));
     }
+
     //Method that is used to generate push Notification
     private void receiveNotification(String messageBody) {
-        Log.d("Received ID on Recieve",String.valueOf(recievedID));
-    //Activity that will open when clicking on notification
+        Log.d("Received ID on Recieve", String.valueOf(recievedID));
+        //Activity that will open when clicking on notification
         Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+        intent.putExtra("id",recievedID);
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
         Random generator = new Random();
 
         mNotificationManager = (NotificationManager)
                 getApplicationContext().getSystemService(Context.NOTIFICATION_SERVICE);
+        // Allowing every notification to open separately
         PendingIntent contentIntent = PendingIntent.getActivity(getApplicationContext(), generator.nextInt(),
                 intent, PendingIntent.FLAG_UPDATE_CURRENT);
 
@@ -60,10 +63,12 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
                         .setAutoCancel(true)
                         .setContentText(messageBody);
 
-//
+
+        mBuilder.setContentIntent(contentIntent);
         mNotificationManager.notify(0, mBuilder.build());
 
     }
+
     Random random = new Random();
     int m = random.nextInt(9999 - 1000) + 1000;
 }
